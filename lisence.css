@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+}
+
+#logo {
+    width: 300px;
+    float: left;
+}
+
+#logo_gambar {
+    font-size: 25px;
+    position: relative;
+    bottom: 10px;
+    color: #355E3B;
+}
+
+#menu {
+    width: 900px;
+    float: left;
+    text-align: center;
+}
+
+.menu ul {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+li a {
+    padding: 5px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: red;
+    font-size: 20px;
+}
+
+.lisence {
+    margin: 40px 0; /* Added spacing around the lisence section */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.lisence-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.lisence-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.click {
+    padding: 10px 20px;
+    background-color: #355E3B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.click:hover {
+    background-color: #2e5034;
+}

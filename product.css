@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+}
+
+#logo {
+    width: 300px;
+    float: left;
+}
+
+#logo_gambar {
+    font-size: 25px;
+    position: relative;
+    bottom: 10px;
+    color: #355E3B;
+}
+
+#menu {
+    width: 900px;
+    float: left;
+    text-align: center;
+}
+
+.menu ul {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+li a {
+    padding: 5px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: bolder;
+    color: red;
+    font-size: 20px;
+}
+
+.product-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.product-title {
+    font-size: 36px;
+    color: #355E3B;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    max-width: 300px; /* Control max width of product items */
+}
+
+.product-image-wrapper {
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio 1:1 */
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #ddd;
+}
+
+.product-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    color: #355E3B;
+    margin: 15px 0;
+}
+.product-price {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #fd0000;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-button, .buy-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-button {
+    background-color: #f4a261;
+    color: #fff;
+}
+
+.buy-button {
+    background-color: #2a9d8f;
+    color: #fff;
+}
+
+.cart-button:hover {
+    background-color: #e76f51;
+}
+
+.buy-button:hover {
+    background-color: #218c74;
+}
