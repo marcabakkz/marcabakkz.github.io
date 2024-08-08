@@ -4,7 +4,7 @@ const startScanning = async () => {
     try {
         // Start scanning with the front camera
         await qrCodeScanner.start(
-            { facingMode: "user" }, // Use front camera
+            { facingMode: "environment" }, // Use back camera for better scanning
             {
                 fps: 10,
                 qrbox: { width: 250, height: 250 }
@@ -14,7 +14,7 @@ const startScanning = async () => {
                 qrCodeScanner.stop();
             },
             (errorMessage) => {
-                console.warn(`QR Code no longer in front of camera.`);
+                console.warn(`QR Code no longer in front of camera: ${errorMessage}`);
             }
         );
     } catch (error) {
