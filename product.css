@@ -142,3 +142,77 @@ li a {
 .buy-button:hover {
     background-color: #218c74;
 }
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .product-item {
+        width: 45%;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+    }
+
+    #menu {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        float: none;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: none;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-button, .buy-button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    li a {
+        font-size: 16px;
+    }
+
+    .product-title {
+        font-size: 28px;
+    }
+
+    .product-item h3 {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 18px;
+    }
+
+    .cart-button, .buy-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}

@@ -306,3 +306,106 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .hero-box, .hero-box-img {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .hero-box {
+        top: 0;
+        margin-bottom: 30px;
+    }
+
+    .main-content-box, .flashsale-item {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .subs-box form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+    }
+
+    #menu {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .menu ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        float: none;
+    }
+
+    .hero-box {
+        top: 0;
+    }
+
+    .flashsale-box {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    li a {
+        font-size: 16px;
+    }
+
+    .hero-box h1 {
+        font-size: 32px;
+    }
+
+    .hero-box p {
+        font-size: 16px;
+    }
+
+    .flashsale-title, .subs-title {
+        font-size: 24px;
+    }
+
+    .flashsale-item h3 {
+        font-size: 18px;
+    }
+
+    .flashsale-item p {
+        font-size: 16px;
+    }
+
+    .flashsale-buttons .cart-button, .flashsale-buttons .buy-button {
+        font-size: 14px;
+    }
+
+    .subs-box input, .subs-box textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .subs-box button {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

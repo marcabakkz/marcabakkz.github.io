@@ -6,15 +6,17 @@ body {
 }
 
 .wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
     display: block;
     overflow: hidden;
 }
 
 #logo {
-    width: 300px;
-    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #logo_gambar {
@@ -25,9 +27,9 @@ body {
 }
 
 #menu {
-    width: 900px;
-    float: left;
+    width: 100%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .menu ul {
@@ -38,7 +40,7 @@ body {
 }
 
 .menu li {
-    float: left;
+    display: inline-block;
 }
 
 li a {
@@ -50,32 +52,36 @@ li a {
     font-size: 20px;
 }
 
-.lisence {
-    margin: 40px 0; /* Added spacing around the lisence section */
+.license {
+    margin: 40px 0;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
 }
 
-.lisence-title {
+.license-title {
     text-align: center;
     font-size: 28px;
     color: #333;
     margin-bottom: 20px;
 }
 
-.lisence-box {
+.license-box {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
     margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
 }
 
 .button-group {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .click {
@@ -86,8 +92,73 @@ li a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .click:hover {
     background-color: #2e5034;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #logo {
+        margin-bottom: 15px;
+    }
+
+    #logo_gambar {
+        font-size: 22px;
+    }
+
+    #menu {
+        margin-bottom: 20px;
+    }
+
+    li a {
+        padding: 5px 15px;
+        font-size: 18px;
+    }
+
+    .license-title {
+        font-size: 24px;
+    }
+
+    .license-box {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .click {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #qr-reader {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .license-title {
+        font-size: 22px;
+    }
+
+    .license-box {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .click {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
 }
