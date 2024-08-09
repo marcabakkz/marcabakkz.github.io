@@ -2,21 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic', sans-serif;
-    background-color: #f4f4f4;
 }
 
 .wrapper {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
     display: block;
     overflow: hidden;
 }
 
 #logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+    width: 300px;
+    float: left;
 }
 
 #logo_gambar {
@@ -27,9 +24,9 @@ body {
 }
 
 #menu {
-    width: 100%;
+    width: 900px;
+    float: left;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .menu ul {
@@ -40,7 +37,7 @@ body {
 }
 
 .menu li {
-    display: inline-block;
+    float: left;
 }
 
 li a {
@@ -53,115 +50,115 @@ li a {
 }
 
 .license {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-.license-title {
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .license-box {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 900px;
+    margin: 0 auto;
+    box-shadow: 2px 4px 8px red;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-size: 16px;
-    color: #333;
 }
 
-.button-group {
+.button-box {
+    margin-top: 40px;
+}
+
+.button-item {
+    width: 120px;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    margin: 10px 20px;
+    background-color: red;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    align-items: center;
 }
 
-.click {
-    padding: 10px 20px;
-    background-color: #355E3B;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+.button-item a {
+    text-decoration: none;
+    color: white;
 }
 
-.click:hover {
-    background-color: #2e5034;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .wrapper {
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .wrapper, .license {
         width: 100%;
         padding: 0 20px;
-    }
-
-    #logo {
-        margin-bottom: 15px;
-    }
-
-    #logo_gambar {
-        font-size: 22px;
+        box-sizing: border-box;
     }
 
     #menu {
-        margin-bottom: 20px;
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    #logo {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .license-box {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .button-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu ul {
+        display: flex;
+        justify-content: center;
     }
 
     li a {
-        padding: 5px 15px;
+        padding: 10px 15px;
         font-size: 18px;
     }
 
-    .license-title {
-        font-size: 24px;
+    .button-box {
+        margin-top: 30px;
+    }
+
+    .button-item {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    li a {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+
+    #logo_gambar {
+        font-size: 25px;
+        bottom: 0;
     }
 
     .license-box {
-        font-size: 14px;
         padding: 15px;
     }
 
-    .click {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    #qr-reader {
+    .button-item {
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-}
-
-@media (max-width: 430px) {
-    .license-title {
-        font-size: 22px;
-    }
-
-    .license-box {
-        font-size: 13px;
-        padding: 10px;
-    }
-
-    .click {
-        padding: 8px 10px;
-        font-size: 12px;
-    }
-
-    li a {
-        font-size: 16px;
-        padding: 5px 10px;
+        font-size: 14px;
     }
 }
