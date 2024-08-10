@@ -1,165 +1,165 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Franklin Gothic', sans-serif;
-}
-
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-    display: block;
-    overflow: hidden;
-}
-
-#logo {
-    width: 300px;
-    float: left;
-}
-
-#logo_gambar {
-    font-size: 25px;
-    position: relative;
-    bottom: 10px;
-    color: #355E3B;
-}
-
-#menu {
-    width: 900px;
-    float: left;
-    text-align: center;
-}
-
-.menu ul {
-    overflow: hidden;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    float: left;
-}
-
-li a {
-    padding: 5px 20px;
-    display: block;
-    text-decoration: none;
-    font-weight: bolder;
-    color: red;
-    font-size: 20px;
-}
-
-.license {
-    margin-top: 30px;
-    margin: 0 auto;
-}
-
-.license-box {
-    text-align: center;
-    border: 1px solid gray;
-    border-radius: 20px;
-    width: 900px;
-    margin: 0 auto;
-    box-shadow: 2px 4px 8px red;
-    padding: 20px;
-}
-
-.button-box {
-    margin-top: 40px;
-}
-
-.button-item {
-    width: 120px;
-    height: 35px;
-    border: 1px solid gray;
-    border-radius: 30px;
-    margin: 10px 20px;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-item a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 1024px) {
-    .wrapper, .license {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic', sans-serif;
     }
 
-    #menu {
-        width: 100%;
-        text-align: right;
-        margin-top: 10px;
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
     }
 
     #logo {
-        float: none;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .license-box {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .button-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .menu ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    li a {
-        padding: 10px 15px;
-        font-size: 18px;
-    }
-
-    .button-box {
-        margin-top: 30px;
-    }
-
-    .button-item {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    li a {
-        font-size: 18px;
-        padding: 8px 10px;
+        width: 300px;
+        float: left;
     }
 
     #logo_gambar {
         font-size: 25px;
-        bottom: 0;
+        position: relative;
+        bottom: 10px;
+        color: #355E3B;
+    }
+
+    #menu {
+        width: 900px;
+        float: left;
+        text-align: center;
+    }
+
+    .menu ul {
+        overflow: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none;
+        font-weight: bolder;
+        color: red;
+        font-size: 20px;
+    }
+
+    .license {
+        margin-top: 30px;
+        margin: 0 auto;
     }
 
     .license-box {
-        padding: 15px;
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 20px;
+        width: 900px;
+        margin: 0 auto;
+        box-shadow: 2px 4px 8px red;
+        padding: 20px;
+    }
+
+    .button-box {
+        margin-top: 40px;
     }
 
     .button-item {
-        width: 100%;
-        font-size: 14px;
+        width: 120px;
+        height: 35px;
+        border: 1px solid gray;
+        border-radius: 30px;
+        margin: 10px 20px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
+
+    .button-item a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 1024px) {
+        .wrapper, .license {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        #menu {
+            width: 100%;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        #logo {
+            float: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .license-box {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .button-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-item {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .menu ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        li a {
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+
+        .button-box {
+            margin-top: 30px;
+        }
+
+        .button-item {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 430px) {
+        li a {
+            font-size: 18px;
+            padding: 8px 10px;
+        }
+
+        #logo_gambar {
+            font-size: 25px;
+            bottom: 0;
+        }
+
+        .license-box {
+            padding: 15px;
+        }
+
+        .button-item {
+            width: 100%;
+            font-size: 14px;
+        }
+    }
