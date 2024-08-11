@@ -32,35 +32,57 @@
                 <div class="qna-box">
                     <h2>Welcome! Here are questions you have set to us</h2>
                 </div>
-                <div class="qna-list">
+
+                <!-- Search Menu -->
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search questions...">
+                </div>
+
+                <div class="qna-list" id="qna-list">
                     <h3 class="qna-title">Questions & Answers</h3>
                     <div class="qna-items">
-                        <h3>How To Order</h3>
+                        <h3 class="qna-title">How To Order</h3>
                         <p>By clicking "purchase" on any product, you will be redirected to WhatsApp and can follow the instructions.</p>
                     </div>
                     <div class="qna-items">
-                        <h3>How To Sign Up</h3>
+                        <h3 class="qna-title">How To Sign Up</h3>
                         <p>Click "Sign Up" in the About section to register for our application.</p>
                     </div>
                     <div class="qna-items">
-                        <h3>How To See Lisence</h3>
-                        <p>By clicking "Document of our lisence" in the lisence section.</p>
+                        <h3 class="qna-title">How To See License</h3>
+                        <p>By clicking "Document of our license" in the license section.</p>
                     </div>
                      <div class="qna-items">
-                        <h3>How to return or postponed the product we have bought?</h3>
-                        <p>By composing on our whatsapp, "cancel-product" and follow the Instruction.</p>
+                        <h3 class="qna-title">How to return or postponed the product we have bought?</h3>
+                        <p>By composing on our whatsapp, "cancel-product" and follow the instruction.</p>
                     </div>
                     <div class="qna-items">
-                        <h3>How To Login</h3>
+                        <h3 class="qna-title">How To Login</h3>
                         <p>by clicking, "Sign in" in the About Section.</p>
                     </div>
                     <div class="qna-items">
-                        <h3>How To Collaboration?</h3>
+                        <h3 class="qna-title">How To Collaboration?</h3>
                         <p>By composing on our whatsapp, "take-collaborate" and follow the instruction.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const qnaItems = document.querySelectorAll('.qna-items');
+
+            qnaItems.forEach(function(item) {
+                const title = item.querySelector('.qna-title').innerText.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

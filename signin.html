@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="Marcabakkz-black.png">
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>or login with</p>
+        <div class="social-login">
+            <button id="google-login">Login with Google</button>
+            <button id="facebook-login">Login with Facebook</button>
+        </div>
+    </div>
+
+    <!-- Google Login API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        }
+
+        document.getElementById('google-login').onclick = function() {
+            gapi.auth2.getAuthInstance().signIn().then(onSignIn);
+        }
+    </script>
+
+    <!-- Facebook Login API -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : 'YOUR_APP_ID', // Ganti dengan Facebook App ID Anda
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v12.0'
+            });
+
+            FB.AppEvents.logPageView();
+        };
+
+        document.getElementById('facebook-login').onclick = function() {
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    console.log('Welcome! Fetching your information....');
+                    FB.api('/me', function(response) {
+                        console.log('Good to see you, ' + response.name + '.');
+                    });
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+        };
+    </script>
+
+    <!-- Local Login Validation -->
+    <script>
+        const registeredUsers = [
+            { email: 'tupabakara@gmail.com', password: 'tupabakara1' },
+            { email: 'user2@example.com', password: 'mypassword' }
+        ];
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const user = registeredUsers.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert('Login successful! Welcome, ' + email);
+                // Redirect to dashboard or other page
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -72,7 +72,34 @@ li a {
 .qna-title {
     text-align: center;
 }
+.search-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
+.search-container input {
+    width: 60%;
+    padding: 10px 15px;
+    border: 2px solid #355E3B;
+    border-radius: 25px;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: red;
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.3);
+    background-color: #f9f9f9;
+}
+
+.search-container input::placeholder {
+    color: #999;
+    font-style: italic;
+}
 .qna-items {
     padding-left: 20px;
     border: 1px solid;
@@ -146,6 +173,11 @@ li a {
         margin-left: 0;
     }
 }
+.search-container input {
+    width: 80%;
+    font-size: 16px;
+    padding: 8px 12px;
+}
 
 @media only screen and (max-width: 430px) {
     li a {
@@ -181,4 +213,8 @@ li a {
     .qna-items p {
         font-size: 16px;
     }
+}   .search-container input {
+    width: 95%;
+    font-size: 14px;
+    padding: 8px 10px;
 }

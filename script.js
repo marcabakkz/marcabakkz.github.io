@@ -25,7 +25,7 @@ document.getElementById('subscribe-form').addEventListener('submit', function(ev
     const message = document.getElementById('message').value;
 
     // Construct WhatsApp URL
-    const phoneNumber = '+6283178457214';
+    const phoneNumber = '083178457214';
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
 
     // Open WhatsApp URL in new tab
